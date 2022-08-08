@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {
   let number = event.queryStringParameters.num || 0;
-  if (!isNaN(number)) {
+  if (isNaN(number)) {
     number = 0;
   } else {
     number = parseInt(number);
